@@ -1,0 +1,36 @@
+---
+# tasks file for user.bash_env
+#
+- name: Ensure .bash_profile exists in /etc/skel directory
+  template:
+          src: bash_profile.j2
+          dest: /etc/skel/.bash_profile
+          owner: root
+          group: root
+          mode: 0644
+          force: yes
+
+- name: Ensure .bashrc exists in /etc/skel directory
+  template:
+          src: bashrc.j2
+          dest: /etc/skel/.bashrc
+          owner: root
+          group: root
+          mode: 0644
+          force: yes
+
+
+- name: Ensure .vimrc exists in /etc/skel directory
+  template:
+          src: vimrc.j2
+          dest: /etc/skel/.vimrc
+          owner: root
+          group: root
+          mode: 0644
+          force: yes
+
+
+
+
+
+
